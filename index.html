@@ -28,8 +28,30 @@
 
             <p>por: Thayler Nonato</p>
             <p>seja bem vindo ao meu primeiro post sobre one piece! vou compartilhar um pouco sobre este anime incrivel e curiosidades sobre ele.</p>
+            <button>👍 <span>0</span>​</button>
+            <button>👎​ <span>0</span>​</button>
         </main>
     </body>
+    <script>
+        const botoes = document.querySelectorALL("button");
+
+        botoes.forEach( function(botao){
+            let curtiu = false;
+            botao.addEventListener("click", botaoClicado);
+            function botaoClicado(){
+                console.log("fui clicado");
+                let texto = botao.querySelector("span");
+                if (curtiu === false){
+                    texto.textContent++;
+                    curtiu = true;
+                } else{
+                    texto.textContent--;
+                    curtiu = false;
+                }
+            }
+        })
+
+    </script>
     </html>
     <h1>O QUE È ONE PIECE?</h1>
 
@@ -109,4 +131,3 @@ A Motivação: Cumprir a promessa que sua antiga tripulação (os Piratas Rumbar
 O Sonho: Alcançar a coexistência pacífica e a igualdade entre os Tritões/Sereianos e os Humanos.
 
 A Motivação: Dar continuidade ao legado e aos ideais da Rainha Otohime e do Capitão Fisher Tiger, ajudando a livrar seu povo do preconceito e da escravidão.</p>
-<button>👍​</button>
